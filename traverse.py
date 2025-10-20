@@ -1,9 +1,4 @@
 import os
-from cryptography.hazmat.backends import default_backend # type: ignore
-from cryptography.hazmat.primitives import serialization # type: ignore
-from cryptography.hazmat.primitives.asymmetric import padding # type: ignore
-from cryptography.hazmat.primitives import hashes # type: ignore
-from cryptography.fernet import Fernet # type: ignore
 
 # Set the path to the Desktop folder (adjust as needed)
 desktop_path = os.path.join(os.path.expanduser("~"), "Desktop")
@@ -14,4 +9,3 @@ for root, dirs, files in os.walk(desktop_path):
         # Full path of the file
         file_path = os.path.join(root, file_name)
         print(f"Found file: {file_path}")
-
