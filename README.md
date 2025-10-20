@@ -1,4 +1,4 @@
-# Ransomware Proof of Concept
+# Ransomware - Proof of Concept
 
 ## ⚠️ IMPORTANT DISCLAIMERS
 
