@@ -54,8 +54,6 @@ This proof of concept demonstrates a simplified ransomware system with two main 
 ```
 ├── ransom-encrypt.py    # Victim-side encryption script
 ├── ransom-decrypt.py    # Server-side decryption service
-├── traverse.py          # File discovery utility
-├── r.py                 # Legacy encryption script
 └── README.md           # This documentation
 ```
 
@@ -134,13 +132,6 @@ def handle(self):
     # Send back to victim
     self.request.sendall(decrypted_symmetric_key)
 ```
-
-### `traverse.py` - File Discovery
-
-A utility script that demonstrates how ransomware discovers files to encrypt:
-- Walks through directory structures
-- Identifies potential target files
-- Currently only prints file paths (demonstration only)
 
 ---
 
